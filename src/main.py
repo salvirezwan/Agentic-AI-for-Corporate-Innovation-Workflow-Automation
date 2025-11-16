@@ -352,25 +352,6 @@ async def upload_evaluation(session_id: str, file: UploadFile = File(...)):
     return {"status": "evaluation_uploaded", "file": dest}
 
 
-# ---------------------------------------------------------
-# Validate Scores & Select Top Ideas
-# ---------------------------------------------------------
-# @app.post("/sessions/{session_id}/validate_scores")
-# def validate_and_select(session_id: str, top_k: int = 3):
-#     if session_id not in sessions:
-#         raise HTTPException(status_code=404, detail="Session not found")
-
-#     eval_path = sessions[session_id].get("evaluation_csv")
-#     if not eval_path:
-#         raise HTTPException(status_code=400, detail="No evaluation CSV uploaded")
-
-#     logger.info("Selecting top ideas…")
-#     selected = score_and_select_top(session_id, eval_path, top_k=top_k)
-
-#     sessions[session_id]["selected_ideas"] = selected
-#     sessions[session_id]["state"] = "ideas_selected"
-
-#     return {"message": "Scores validated; top ideas selected", "selected": selected}
 
 from fastapi import Body
 
