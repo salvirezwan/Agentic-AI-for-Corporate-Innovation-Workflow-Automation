@@ -132,6 +132,8 @@ Streamlit will open at http://localhost:8501. The Streamlit UI calls the FastAPI
 │  │  ├─ template_generator.py   # Builds evaluation template CSV from ideas
 │  │  ├─ score_validator.py      # Validator for evaluation CSV
 │  │  ├─ action_plan_writer.py   # Renders selected ideas into action-plan files
+│  │  ├─ semantic_reasoner.py    # Retrieves relevant_competencies
+│  │  ├─ analogy_finder.py       # Finds analogies for generating ideas
 │  ├─ utils/
 │  │  └─ csv_utils.py            # generate/validate CSV helpers
 │  ├─ db/
